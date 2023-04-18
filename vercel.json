@@ -1,5 +1,10 @@
 {
     "version": 2,
+    "functions": {
+      "src/**/*": {
+        "includeFiles": "src/config/**"
+      }
+    },
     "builds": [
       {
         "src": "index.js",
