@@ -8,7 +8,7 @@ module.exports = function () {
   );
   winston.add(new winston.transports.File({ filename: "logfile.log" }));
   winston.add(
-    new winston.transports.MongoDB({ db: "mongodb://127.0.0.1/vidly" })
+    new winston.transports.MongoDB({ db: process.env.vidly_db })
   );
   winston.exceptions.handle(
     new winston.transports.Console({ colorize: true, prettyPrint: true }),
